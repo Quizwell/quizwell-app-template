@@ -1,0 +1,275 @@
+:root {
+    color-scheme: light dark;
+
+    --animation-duration-small: 0.2s;
+    --animation-duration-medium: 0.3s;
+    --animation-duration-large: 0.4s;
+    --animation-duration-screen: 0.4s;
+    --animation-duration-sheet: 0.3s;
+    --animation-duration-dialog: 0.3s;
+    --animation-duration-button: 0.1s;
+
+    --animation-easing-default: cubic-bezier(0.075, 0.82, 0.165, 1);
+    --animation-easing-screen: ease;
+    --animation-easing-sheet: ease;
+    --animation-easing-dialog: var(--animation-easing-default);
+    --animation-easing-button: ease;
+
+    --z-index-overlay: 999;
+    --z-index-sheet: 1000;
+    --z-index-dialog: 1000;
+
+    --border-radius-button: 10px;
+    --border-radius-button-dialog: 8px;
+    --border-radius-sheet: 15px 15px 0 0;
+    --border-radius-sheet-desktop: 15px;
+    --border-radius-dialog: 15px;
+
+    --box-shadow-screen: 0 0 10px rgba(0, 0, 0, 0.2);
+    --box-shadow-sheet: 0 0 10px rgba(0, 0, 0, 0.2);
+    --box-shadow-dialog: 0 0 10px rgba(0, 0, 0, 0.2);
+
+    --color-gradient-app-accent: linear-gradient(
+        90deg,
+        var(--color-orange) 0%,
+        var(--color-purple) 70%,
+        var(--color-blue) 100%
+    );
+    --color-gradient-app-accent-foreground: white;
+    --color-gradient-blue: linear-gradient(90deg, #74bbbd, #5185a6);
+    --color-gradient-blue-foreground: white;
+    --color-gradient-purple: linear-gradient(90deg, #7e74cf, #7e73ce);
+    --color-gradient-purple: white;
+    --color-gradient-orange: linear-gradient(90deg, #d88041, #cf503d);
+    --color-gradient-orange: white;
+
+    --color-gradient-destructive: linear-gradient(90deg, #d88041, #cf503d);
+    --color-gradient-destructive-foreground: white;
+
+
+    --color-app-accent: var(--orange-color);
+    --color-app-accent-foreground: white;
+    --color-blue: #5185a6;
+    --color-purple: #7e73ce;
+    --color-orange: #cf503d;
+    --color-blue-dark: #74bbbd;
+    --color-purple-dark: #7e74cf;
+    --color-orange-dark: #d88041;
+
+    --color-destructive: #ff6f66;
+    --color-destructive-foreground: white;
+
+    --color-background: #fff;
+    --color-background-secondary: #eee;
+    --color-foreground: #000;
+    --color-foreground-inverted: #fff;
+    --color-foreground-secondary: #333;
+    --color-text: var(--color-foreground);
+    --color-label: var(--color-foreground);
+
+    --color-overlay: #000;
+
+    --color-title: var(--color-foreground);
+    --color-heading: var(--color-foreground);
+    --color-subheading: var(--color-foreground);
+
+    --color-button-background: var(--color-background-secondary);
+    --color-button-foreground: var(--color-foreground);
+    --color-button-background-active: var(--color-background);
+    --color-button-background-selected: var(--color-foreground);
+    --color-button-foreground-selected: var(--color-background);
+    --color-button-background-primary: var(--color-gradient-blue);
+    --color-button-foreground-primary: var(--color-gradient-blue-foreground);
+    --color-button-background-destructive: var(--color-gradient-destructive);
+    --color-button-foreground-destructive: var(--color-gradient-destructive-foreground);
+
+    --opacity-overlay: 0.5;
+
+    --url-gradient: url('/images/gradient-light.png');
+
+    --font-family: "Inter", system-ui, sans-serif;
+
+    --font-size-title: 2rem;
+    --font-size-heading: 1.5rem;
+    --font-size-subheading: 1.25rem;
+    --font-size-text: 1rem;
+    --font-size-label: 1rem;
+    --font-size-button: 1rem;
+    --font-size-button-icon: 25px;
+
+    --font-weight-title: 900;
+    --font-weight-heading: 700;
+    --font-weight-subheading: 700;
+    --font-weight-text: 700;
+    --font-weight-label: 700;
+    --font-weight-button: 700;
+
+    --width-screen: 100vw;
+    --width-sheet-desktop-min: 500px;
+    --width-sheet-desktop-max: 600px;
+    --width-dialog: calc(100vw - 40px);
+    --width-dialog-max: 500px;
+
+    --height-screen: 100%;
+    --height-sheet: auto;
+    --height-sheet-min: 300px;
+    --height-sheet-max: 75vh;
+    --height-dialog: auto;
+    --height-dialog-min: 150px;
+    --height-dialog-max: 50vh;
+    --height-button: 40px;
+
+    --padding-screen:
+        max(20px, calc(env(safe-area-inset-top) + 5px))
+        max(20px, calc(env(safe-area-inset-right) + 5px))
+        max(20px, calc(env(safe-area-inset-bottom) + 5px))
+        max(20px, calc(env(safe-area-inset-left) + 5px));
+    --padding-screen-top-with-title: max(40pt, calc(env(safe-area-inset-top)));
+    --padding-sheet:
+        20px
+        max(20px, calc(env(safe-area-inset-right) + 5px))
+        max(20px, calc(env(safe-area-inset-bottom) + 5px))
+        max(20px, calc(env(safe-area-inset-left) + 5px));
+    --padding-dialog: 15px;
+    --padding-title-bar: 0 0 0.5rem 0;
+    --padding-title: 0 0 0.5rem 0;
+    --padding-heading: 0.25rem 0;
+    --padding-subheading: 0.1rem 0;
+    --padding-text: 0;
+    --padding-label: 0 0 0 0.5rem;
+    --padding-button: 0 10px;
+    --padding-button-dialog: 0 8px;
+
+    --inset-top-title-bar: max(20px, calc(env(safe-area-inset-top) + 5px));
+    --inset-left-title-bar: max(20px, calc(env(safe-area-inset-left) + 5px));
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-app-accent: #0096FF;
+        --color-background: #000;
+        --color-background-secondary: #333;
+        --color-foreground: #fff;
+        --color-foreground-inverted: #000;
+        --color-foreground-secondary: #aaaaaa;
+        --color-background-gradient-overlay-left: transparent;
+    
+        --color-overlay: #000;
+    
+        --color-title: var(--color-foreground);
+        --color-heading: var(--color-foreground);
+        --color-subheading: var(--color-foreground);
+    
+        --color-button-background: var(--color-background-secondary);
+        --color-button-foreground: var(--color-foreground);
+        --color-button-background-selected: var(--color-foreground);
+        --color-button-foreground-selected: var(--color-background);
+        --color-button-primary-background: var(--color-app-accent);
+        --color-button-primary-foreground: var(--color-foreground-inverted);
+    
+        --opacity-overlay: 0.5;
+
+        --url-gradient: url('/images/gradient-dark.png');
+    }
+}
+
+* {
+    box-sizing: border-box;
+    -webkit-touch-callout: none !important;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+    -webkit-tap-highlight-color: transparent !important;
+}
+
+html, body {
+    overflow: hidden;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    height: 100dvh;
+    margin: 0;
+    padding: 0;
+    font-size: 15pt;
+    font-family: var(--font-family);
+    z-index: 1;
+    background: var(--color-background);
+}
+
+#app {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    height: 100dvh;
+    margin: 0;
+    padding: 0;
+    overflow: none;
+}
+
+#loadingScreen {
+    background-color: var(--color-background);
+    z-index: 500000;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#loadingScreen.loaded {
+    pointer-events: none;
+    opacity: 0;
+}
+
+#loadingScreen .background {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 100vh;
+    width: 100dvh;
+    height: 100vw;
+    z-index: 500001;
+    background-image: url(images/gradient-light.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: translate(-50%, -50%) rotate(90deg);
+    animation: LoadingScreenFadeIn 1s ease-in-out forwards;
+}
+@keyframes LoadingScreenFadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+#loadingScreen .foreground {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 500002;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#loadingScreen img {
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+    box-shadow: 0 0 5px #999999;
+}
+
+@media (prefers-color-scheme: dark) {
+    #loadingScreen .background {
+        background-image: url(images/gradient-dark.png);
+    }
+
+    #loadingScreen img {
+        box-shadow: 0 0 5px #000000;
+    }
+}

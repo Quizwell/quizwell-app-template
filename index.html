@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Content Judge</title>
+    <link rel="manifest" href="manifest.json">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Content Judge">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover, user-scalable=0">
+
+    <link rel="stylesheet" href="/fontawesome/css/fontawesome.css">
+    <link rel="stylesheet" href="/fontawesome/css/solid.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap">
+    <link rel="stylesheet" href="styles.css">
+    <script src="init.js"></script>
+    <script src="elementRegistry.js"></script>
+    <script src="navigationController.js"></script>
+</head>
+
+<body>
+    <section id="app">
+        <q-screen id="home" initial presented>
+            <q-app-icon slot="header" app="content-judge"></q-app-icon>
+            <q-title>Content Judge</q-title>
+            <q-spacer></q-spacer>
+            <q-label>More</q-label>
+            <q-navigation-button icon="star" to="memory">Memory</q-navigation-button>
+            <q-navigation-button icon="star" to="test">Test Screen</q-navigation-button>
+            <q-stack direction="row">
+                <q-text>Test2</q-text>
+                <q-text>Test2</q-text>
+            </q-stack>
+            <q-navigation-button icon="arrow-up-from-bracket" to="export">Test Sheet</q-navigation-button>
+            <q-navigation-button icon="arrow-up-from-bracket" to="shortsheet">Test Sheet Desktop</q-navigation-button>
+            <q-navigation-button icon="circle-exclamation" to="dialogtest">Test Dialog</q-navigation-button>
+            <q-label>Settings</q-label>
+            <q-navigation-button icon="circle-exclamation" to="dialogtest">Test Dialog</q-navigation-button>
+        </q-screen>
+        <q-screen id="loadingScreen" presented>
+            <q-spacer slot="header"></q-spacer>
+            <div class="background"></div>
+            <div class="foreground">
+                <q-app-icon app="content-judge" size="100px"></q-app-icon>
+            </div>
+        </q-screen>
+        <q-screen title="Memory" id="memory" background-type="memory">
+            <q-toggle-group>
+                <fa-i icon="filter" slot="leading"></fa-i>
+                <q-button selected>Unique</q-button>
+                <q-button>Double</q-button>
+                <q-button>Triple</q-button>
+            </q-toggle-group>
+            <q-toggle-group mode="radio">
+                <q-button rounded slot="leading"><fa-i icon="arrow-down-up-across-line"></fa-i></q-button>
+                <q-button selected>Unique</q-button>
+                <q-button>Double</q-button>
+                <q-button>Triple</q-button>
+            </q-toggle-group>
+        </q-screen>
+        <q-screen title="TEST" id="test">
+            <q-text>Text</q-text>
+            <q-navigation-button icon="star" to="memory">Shortcut to Memory</q-navigation-button>
+            <q-navigation-button icon="star" to="test2">Test 2</q-navigation-button>
+        </q-screen>
+        <q-screen title="TEST 2" id="test2" background-type="memory">
+            <q-text>TEST 2</q-text>
+        </q-screen>
+        <q-sheet title="Export" id="export">
+            <q-text>Test Sheet</q-text>
+            <q-navigation-button icon="circle-exclamation" to="dialogtest">Test Dialog</q-navigation-button>
+            <q-navigation-button icon="star" to="memory">Primary</q-navigation-button>
+            <q-navigation-button icon="star" to="memory">Primary</q-navigation-button>
+            <q-navigation-button icon="star" to="memory">Primary</q-navigation-button>
+            <q-navigation-button icon="star" to="memory">Primary</q-navigation-button>
+            <q-navigation-button icon="star" to="memory">Primary</q-navigation-button>
+            <q-navigation-button icon="star" to="memory">Primary</q-navigation-button>
+            <q-navigation-button icon="star" to="memory">Primary</q-navigation-button>
+            <q-navigation-button icon="star" to="memory">Primary</q-navigation-button>
+            <q-navigation-button icon="star" to="memory">Primary</q-navigation-button>
+            <q-navigation-button icon="star" to="memory">Primary</q-navigation-button>
+            <q-navigation-button icon="star" to="memory">Primary</q-navigation-button>
+            <q-navigation-button icon="star" to="memory">Primary</q-navigation-button>
+            <q-navigation-button icon="star" to="memory">Primary</q-navigation-button>
+            <q-navigation-button icon="star" to="memory">Primary</q-navigation-button>
+            <q-navigation-button icon="star" to="memory">Primary</q-navigation-button>
+            <q-navigation-button icon="star" to="memory">Primary</q-navigation-button>
+            <q-navigation-button icon="star" to="memory">Primary</q-navigation-button>
+            <q-navigation-button icon="star" to="memory">Primary</q-navigation-button>
+        </q-sheet>
+        <q-sheet title="Desktop" id="shortsheet">
+            <q-text>Short Desktop Sheet</q-text>
+            <q-navigation-button icon="circle-exclamation" to="dialogtest">Test Dialog</q-navigation-button>
+            <q-navigation-button icon="star" to="memory">Primary</q-navigation-button>
+            <q-navigation-button icon="star" to="memory">Primary</q-navigation-button>
+        </q-sheet>
+        <q-dialog title="Test" icon="circle-exclamation" id="dialogtest">
+            <q-text>Test Dialog</q-text>
+            <q-dialog-button-group>
+                <q-dialog-button icon="trash" type="destructive">Delete</q-dialog-button>
+                <q-dialog-button icon="certificate">Secondary</q-dialog-button>
+                <q-dialog-button icon="star" type="primary">Primary</q-dialog-button>
+            </q-dialog-button-group>
+        </q-dialog>
+    </section>
+</body>
+</html>
