@@ -5,8 +5,8 @@ class FAIcon extends HTMLElement {
 		super();
 		this.attachShadow({ mode: "open" });
 		this.shadowRoot.innerHTML = `
-			<link href="/fontawesome/css/fontawesome.css" rel="stylesheet">
-			<link href="/fontawesome/css/solid.css" rel="stylesheet">
+			<link href="fontawesome/css/fontawesome.css" rel="stylesheet">
+			<link href="fontawesome/css/solid.css" rel="stylesheet">
 			<style>
 				:host {
 					color: inherit;
@@ -61,7 +61,7 @@ class QAppIcon extends HTMLElement {
 	}
 	setupElement() {
 		if (this.getAttribute("app")) {
-			this.shadowRoot.querySelector("img").src = "/images/apps/" + this.getAttribute("app") + ".png";
+			this.shadowRoot.querySelector("img").src = "images/apps/" + this.getAttribute("app") + ".png";
 		}
 		if (this.getAttribute("size")) {
 			this.shadowRoot.querySelector("img").style.width = this.getAttribute("size");
