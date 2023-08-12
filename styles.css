@@ -85,7 +85,7 @@
 
     --opacity-overlay: 0.5;
 
-    --url-gradient: url('/images/gradient-light.png');
+    --url-gradient: url('images/gradient-light.png');
 
     --font-family: "Inter", system-ui, sans-serif;
 
